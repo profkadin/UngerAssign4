@@ -13,6 +13,7 @@ public class NewCustomerServlet extends HttpServlet {
                           HttpServletResponse response)
                           throws ServletException, IOException 
     {
+            String url;
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
@@ -21,9 +22,26 @@ public class NewCustomerServlet extends HttpServlet {
             String city = request.getParameter("city");
             String state = request.getParameter("state");
             String zipcode = request.getParameter("zipcode");
-
-        response.sendRedirect("Success.html");
-
-
+          
+            
+            String message;
+            if(firstName == null || lastName == null || email == null || phoneNum == null
+                    || address == null || city == null || state == null || zipcode == null ||
+                    firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()  || phoneNum.isEmpty() 
+                    || address.isEmpty() || city.isEmpty()  || state.isEmpty()  || zipcode.isEmpty())
+            {
+                    message = "Please fill out all of the text boxes.";
+                    url = "/New_customer.jsp";
+            }
+            else{
+            message = "";
+            url = "/Success.html";
+            }
+            
+            request.setAttribute("message", message);
+        //response.sendRedirect("Success.html");
+           
+            getServletContext().getRequestDispatcher(url).forward(request, response);
     }
+    
 }
