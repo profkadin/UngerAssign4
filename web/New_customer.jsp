@@ -14,16 +14,17 @@
     <body>
         <h1>Create an Account</h1>
         
+        <p><i>${message}</i></p>
         <form action="newUser" method="post">
             <table>
-                <tr><td>First Name: <td><input type="text" name="firstName" required> <br>
-                <tr><td>Last Name: <td><input type="text" name="lastName" required> <br>
-                <tr><td>Phone Number: <td><input type="number" name="phoneNumber" required> <br>
-                <tr><td>Address: <td><input type="text" name="address" required> <br>
-                <tr><td>City: <td><input type="text" name="city" required> <br>
-                <tr><td>State: <td><input type="text" name="state" required> <br>
-                <tr><td>Zip-code: <td><input type="text" name="zipcode" required> <br>
-                <tr><td>Email: <td><input type="email" name="email" required> <br>
+                <tr><td>First Name: <td><input type="text" name="firstName"> <br>
+                <tr><td>Last Name: <td><input type="text" name="lastName"> <br>
+                <tr><td>Phone Number: <td><input type="number" name="phoneNumber"> <br>
+                <tr><td>Address: <td><input type="text" name="address"> <br>
+                <tr><td>City: <td><input type="text" name="city"> <br>
+                <tr><td>State: <td><input type="text" name="state"> <br>
+                <tr><td>Zip-code: <td><input type="number" name="zipcode"> <br>
+                <tr><td>Email: <td><input type="email" name="email"> <br>
             
             </table>
             <input type="submit" value="Submit">
