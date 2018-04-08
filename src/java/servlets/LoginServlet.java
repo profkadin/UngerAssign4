@@ -19,6 +19,9 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        
         if (username.equals("jsmith@toba.com") && password.equals("letmein")){
             url = "/Account_activity.html";          
         }

@@ -11,9 +11,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Create an Account</title>
     </head>
-    <body>
+    <body> 
+        <%@include file="header.html" %>
         <h1>Create an Account</h1>
-        
+       
         <p><i>${message}</i></p>
         <form action="newUser" method="post">
             <table>
@@ -29,5 +30,6 @@
             </table>
             <input type="submit" value="Submit">
         </form>
+        <%@include file="footer.jsp" %>
     </body>
 </html>

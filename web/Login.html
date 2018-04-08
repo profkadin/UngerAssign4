@@ -11,15 +11,18 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <%@include file="header.html" %>
         <div>Login Page</div>
         <a href="New_customer.jsp">New Customer</a>
         <form action="login" method="post">
             Username: <input type="text" name="username" required> <br>
             Password: <input type="text" name="password" required> <br>
             
+            <a href="password_reset.jsp">Reset Password</a> <br>
             
             <input type="submit" name="Submit">
             
         </form>
+        <%@include file="footer.jsp" %>
     </body>
 </html>

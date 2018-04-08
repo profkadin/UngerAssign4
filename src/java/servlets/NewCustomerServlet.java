@@ -23,6 +23,12 @@ public class NewCustomerServlet extends HttpServlet {
             String state = request.getParameter("state");
             String zipcode = request.getParameter("zipcode");
           
+            String username = lastName + zipcode;
+            String password = "welcome1";
+            User user = new User(firstName, lastName, email, phoneNum, address, city, state, zipcode, username, password);
+            
+            HttpSession session=request.getSession();
+            session.setAttribute("user", user);
             
             String message;
             if(firstName == null || lastName == null || email == null || phoneNum == null
@@ -35,7 +41,7 @@ public class NewCustomerServlet extends HttpServlet {
             }
             else{
             message = "";
-            url = "/Success.html";
+            url = "/Success.jsp";
             }
             
             request.setAttribute("message", message);
