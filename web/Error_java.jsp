@@ -12,6 +12,8 @@
         <title>Exception Thrown</title>
     </head>
     <body>
+        <%@include file="header.html" %>
         <h1>Java has thrown an exception</h1>
+        <%@include file="footer.jsp" %>
     </body>
 </html>

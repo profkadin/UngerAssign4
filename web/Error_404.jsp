@@ -12,6 +12,8 @@
         <title>404 Error</title>
     </head>
     <body>
+        <%@include file="header.html" %>
         <h1>404 Error<h1>
+        <%@include file="footer.jsp" %>
     </body>
 </html>
