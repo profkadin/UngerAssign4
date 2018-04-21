@@ -39,6 +39,8 @@ public class NewCustomerServlet extends HttpServlet {
             else{
             User user = new User(firstName, lastName, email, phoneNum, address, city, state, zipcode, username, password);
             
+            UserDB.insert(user);
+            
             HttpSession session=request.getSession();
             session.setAttribute("user", user);
             message = "";
